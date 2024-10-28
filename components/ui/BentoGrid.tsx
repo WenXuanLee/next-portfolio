@@ -1,13 +1,9 @@
 "use client"
 import Image from 'next/image'
-import { useState } from "react";
+import React, { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
-
 import { cn } from "@/lib/style-utils";
-
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { Globe } from "./GridGlobe";
@@ -97,7 +93,7 @@ export const BentoGridItem = ({
               src={img}
               alt={img}
               className={cn(imgClassName, "object-cover object-center ")}
-            />
+              width={20} height={20}              />
           )}
         </div>
         <div
@@ -108,7 +104,7 @@ export const BentoGridItem = ({
             <Image
               src={spareImg}
               alt={spareImg}
-              //   width={220}
+              width={20} height={20}
               className="object-cover object-center w-full h-full"
             />
           )}
@@ -174,9 +170,6 @@ export const BentoGridItem = ({
 
           {id === 6 && (
             <div className="mt-5 relative">
-              <div className={`absolute -bottom-5 right-0`}>
-                <Lottie options={defaultOptions} />
-              </div>
               <MagicButton
                 title={copied ? 'Email Copied' : 'Copy my email'}
                 icon={<IoCopyOutline />}

@@ -24,11 +24,13 @@ const Clients = () => {
                 src={img}
                 alt={name}
                 className="md:w-10 w-5"
+                width={20} height={20}
               />
               <Image
                 src={nameImg}
                 alt={name}
                 className="md:w-24 w-20"
+                width={20} height={20}
               />
             </div>
           ))}
